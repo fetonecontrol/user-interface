@@ -29,14 +29,24 @@ $(document).ready(function() {
 
   });
 
-  $("for#sub").submit(function(event) {
-  event.preventDefault();
-  const number1 = parseInt($("#sub1").val());
-  const number2 = parseInt($("#sub2").val());
-  const result = sub(number1, number2);
-  $("output2").text(result);
+  $("form#subtract").submit(function(event) {
+    event.preventDefault();
+    const number1 = parseInt($("#sub1").val());
+    const number2 = parseInt($("#sub2").val());
+    const result = add(number1, number2);
+    $("#output2").text(result);
+  
+    });
+  
 
-  });
+  // $("form#subtract").submit(function(event) {
+  // event.preventDefault();
+  // const number1 = parseInt($("#sub1").val());
+  // const number2 = parseInt($("#sub2").val());
+  // const result2 = subtract(number1, number2);
+  // $("output2").text(result2);
+
+  // });
 
   $("form#multiply").submit(function(event) {
     event.preventDefault();
@@ -46,13 +56,23 @@ $(document).ready(function() {
     $("#output3").text(result);
 
   })
-  $('form#divide').submit(function(event){
+
+  $("form#divide").submit(function(event) {
     event.preventDefault();
     const number1 = parseInt($("#div1").val());
     const number2 = parseInt($("#div2").val());
-    const resutl = divide(number1, number2);
-    $event("output4").text(result);
+    const result = divide(number1, number2);
+    $("#output4").text(result);
+
   })
+
+  // $('form#divide').submit(function(event){
+  //   event.preventDefault();
+  //   const number1 = parseInt($("#div1").val());
+  //   const number2 = parseInt($("#div2").val());
+  //   const result4 = divide(number1, number2);
+  //   $("output4").text(result4);
+  // })
 
 
 });
