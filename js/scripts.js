@@ -34,7 +34,7 @@ $(document).ready(function() {
   const number1 = parseInt($("#sub1").val());
   const number2 = parseInt($("#sub2").val());
   const result = sub(number1, number2);
-  $("output").text(result);
+  $("output2").text(result);
 
   });
 
@@ -46,8 +46,14 @@ $(document).ready(function() {
     $("#output3").text(result);
 
   })
+  $('form#divide').submit(function(event){
+    event.preventDefault();
+    const number1 = parseInt($("#div1").val());
+    const number2 = parseInt($("#div2").val());
+    const resutl = divide(number1, number2);
+    $event("output4").text(result);
+  })
 
-  
 
 });
 
